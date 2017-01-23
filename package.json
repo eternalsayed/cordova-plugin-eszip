@@ -1,0 +1,25 @@
+{
+  "name": "eszip",
+  "version": "0.0.1",
+  "description": "A cordova plugin to zip files and folders in cordova app. Requires file permission so include cordoa-plugin-file too",
+  "cordova": {
+    "id": "org.apache.cordova.plugin.eszip",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eternalsayed/es-zip.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Sayed Ahad Abbas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eternalsayed/es-zip/issues"
+  },
+  "homepage": "https://github.com/eternalsayed/es-zip#readme"
+}

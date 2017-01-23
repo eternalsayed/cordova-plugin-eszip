@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="org.apache.cordova.plugin.eszip" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ESzip</name>
+    <description>Cordova zip compress</description>
+    <author>Sayed Ahad Abbas (@eternalsayed)</author>
+    <license>MIT</license>    
+    <keywords>cordova,zip,compress</keywords>
+    <repo>https://github.com/eternalsayed/es-zip.git</repo>
+    <issue>https://github.com/eternalsayed/es-zip/issues</issue>
+    
+    <js-module name="ESzip" src="www/ESzip.js">
+        <clobbers target="ESzip"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="ESzip">
+                <param name="android-package" value="org.apache.cordova.plugin.ESzip"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        </config-file>
+        <source-file src="src/android/ESzip.java" target-dir="src/org/apache/cordova/plugin"/>
+        <source-file src="src/android/ZipHelper.java" target-dir="src/org/apache/cordova/plugin"/>
+    </platform>
+</plugin>
