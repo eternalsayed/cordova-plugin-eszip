@@ -1,6 +1,4 @@
 # es-zip
-Cordova zip plugin to zip files and folders on Android
-# Cron for Windows (7/8/10)
 Cordova plugin to provide zip functionality on hybrid applications, such as on those made with Ionic framework. The Java code is mostly borrowed from StackOverflow and so, I've done preprocessing in Javascript. Change it as it may suit you.
 
 # Why was this plugin needed?
@@ -16,6 +14,7 @@ Thereafter, the global object `ESzip` will be available in your app. Please note
 * `zipFolder` requires 4 parameters, namely: `source`, `destination`, `successCallback`, and `errorCallback`. `source` and `destination` have to be absolute file URLs.
 
 # Example
+<pre>
 <code>
  angular.module('starter.services',[])
  .factory('$zip', function($q)
@@ -38,3 +37,4 @@ Thereafter, the global object `ESzip` will be available in your app. Please note
    };
  });
 </code>
+</pre>
