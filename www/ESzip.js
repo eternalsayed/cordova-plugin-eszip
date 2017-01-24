@@ -9,6 +9,6 @@ ESzip.prototype.zipFolder = function(source, destination, success, error) {
     dest = '/'+dest.replace(/^\/?|\/?$/, "");
     //console.log('Source: ',src,'\nOriginal source:',source,' \nDest:', dest,'\nOriginal dest:',destination);
    
-    exec(success, error, "Zipper", "zipFolder", [src, dest]);
+    exec(success, error, "ESzip", "zipFolder", [src, dest]);
 };
 module.exports = new ESzip();
