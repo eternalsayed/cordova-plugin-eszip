@@ -6,11 +6,19 @@ The official cordova plugin for zipping failed for me, resulting in `bad zip`. I
 
 # Getting started
 Install the plugin by using following command:
-`npm install eszip`
+
+via `git` as:
+<pre><code>
+cordova plugin add https://github.com/eternalsayed/es-zip.git
+</code></pre>
+or via `npm` as:
+<pre><code>
+npm install eszip
+</code></pre>
 Thereafter, the global object `ESzip` will be available in your app. Please note that this will not run on browsers so please test on actual devices/simulators only.
 
 # How to zip a folder?
-* `ESZip` exposes function `zipFolder`, using which you can zip your source folder into destination zip file. Please note that `source` and `destination` are meant to be absolute paths, wherein `source` has to be an existing directory/file.
+* `ESzip` exposes function `zipFolder`, using which you can zip your source folder into destination zip file. Please note that `source` and `destination` are meant to be absolute paths, wherein `source` has to be an existing directory/file.
 * `zipFolder` requires 4 parameters, namely: `source`, `destination`, `successCallback`, and `errorCallback`. `source` and `destination` have to be absolute file URLs.
 
 # Example
@@ -23,7 +31,7 @@ Thereafter, the global object `ESzip` will be available in your app. Please note
     zip: function(src, dest)
     {
         var deferred = $q.defer();
-        ESZip.zipFolder(src, dest, function(result)
+        ESzip.zipFolder(src, dest, function(result)
         {
             if(result && result.success)//just to be sure
                 deferred.resolve(result);
