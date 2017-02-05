@@ -1,4 +1,4 @@
-# es-zip
+# cordova-plugin-eszip
 Cordova plugin to provide zip functionality on hybrid applications, such as on those made with Ionic framework. The Java code is mostly borrowed from StackOverflow and so, I've done preprocessing in Javascript. Change it as it may suit you.
 
 # Why was this plugin needed?
@@ -7,13 +7,8 @@ The official cordova plugin for zipping failed for me, resulting in `bad zip`. I
 # Getting started
 Install the plugin by using following command:
 
-via `git` as:
 <pre><code>
-cordova plugin add https://github.com/eternalsayed/es-zip.git
-</code></pre>
-or via `npm` as:
-<pre><code>
-npm install eszip
+cordova plugin add cordova-plugin-eszip
 </code></pre>
 Thereafter, the global object `ESzip` will be available in your app. Please note that this will not run on browsers so please test on actual devices/simulators only.
 
@@ -35,6 +30,8 @@ Thereafter, the global object `ESzip` will be available in your app. Please note
         {
             if(result && result.success)//just to be sure
                 deferred.resolve(result);
+            else
+                deferred.reject(result);
         },
         function(err){
             console.error(err);
