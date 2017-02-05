@@ -12,15 +12,15 @@ import java.util.List;
 public class ZipHelper  
 {
     public static JSONObject zip(String source, String destination) throws IOException, JSONException{
-        Log.d("Zipper", "zip:In zip function");
-        Log.d("Zipper", "zip:Source="+source);
+        Log.d("eszip", "zip:In zip function");
+        Log.d("eszip", "zip:Source="+source);
         JSONObject result = new JSONObject();
         try {
-            Log.d("Zipper", "zip: trying to zip");
+            Log.d("eszip", "zip: trying to zip");
             result = zipFolder(source, destination);
             return result;
         } catch(IOException e2) {
-            Log.d("Zipper", "Error occurred:"+e2.getMessage());
+            Log.d("eszip", "Error occurred:"+e2.getMessage());
             System.err.println(e2);
             
             result.put("success", false);

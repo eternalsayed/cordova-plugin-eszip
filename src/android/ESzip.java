@@ -1,4 +1,4 @@
-package org.apache.cordova.plugin.eszip;
+package org.apache.cordova.plugin;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -19,14 +19,14 @@ public class ESzip extends CordovaPlugin {
         if (action.equals("zipFolder")) {
             String source = args.getString(0);
             String destination = args.getString(1);
-            Log.d("Zipper", "Source="+source);
+            Log.d("eszip", "Source="+source);
             try{
                 zipFolder(source, destination, callbackContext);
                 return true;
             }
             catch(IOException e)
             {
-                Log.d("Zipper", "Error in execute function!"+e.getMessage());
+                Log.d("eszip", "Error in execute function!"+e.getMessage());
                 return false;
             }
         }
